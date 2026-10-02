@@ -1,0 +1,9 @@
+﻿"use client"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
+import { useState } from "react"
+import Link from "next/link"
+export default function Donate(){
+ const [amount,setAmount]=useState(50)
+ return(<main className="bg-[#FFFBF0] min-h-screen"><Navbar/><section className="max-w-[1000px] mx-auto px-6 py-12 grid md:grid-cols-2 gap-10"><div><h1 className="text-[40px] font-black">Give Hope Today</h1><p className="mt-3 opacity-70 text-[13px]">Card, PayPal, Troy, BirKart, Crypto. Instant receipt. 89% field. Video proof 72h.</p><div className="mt-6 space-y-2"><Link href="/projects/1" className="flex justify-between border p-3 rounded-full hover:bg-[#0f3440] hover:text-white transition text-[12px]"><span>💧 Water – 800 people</span><span>$100 →</span></Link><Link href="/projects/2" className="flex justify-between border p-3 rounded-full hover:bg-[#0f3440] hover:text-white transition text-[12px]"><span>📚 Orphan – 1 month</span><span>$35 →</span></Link><Link href="/zakat" className="flex justify-between border p-3 rounded-full hover:bg-[#0f3440] hover:text-white transition text-[12px]"><span>🕌 Zakat Calculator</span><span>→</span></Link></div></div><div className="bg-white border rounded-[24px] p-7 shadow-xl"><h2 className="font-black text-[18px]">Secure Donation</h2><div className="mt-4 grid grid-cols-4 gap-2">{[25,50,100,250].map(v=><button key={v} onClick={()=>setAmount(v)} className={`border-2 rounded-full py-3 font-black ${amount===v?"bg-[#0f3440] text-white border-[#0f3440]":"border-gray-200"}`}>${v}</button>)}</div><button className="mt-6 w-full bg-[#ffcc4d] text-[#0f3440] py-4 rounded-full font-black">Donate ${amount} → Checkout</button><p className="text-center text-[10px] opacity-50 mt-3">🔒 SSL • Instant receipt • Video proof</p></div></section><Footer/></main>)
+}

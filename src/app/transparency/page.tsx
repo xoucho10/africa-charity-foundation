@@ -1,0 +1,7 @@
+﻿"use client"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
+import Link from "next/link"
+export default function Transparency(){
+ return(<main className="bg-[#FFFBF0] min-h-screen"><Navbar/><section className="px-6 py-16 max-w-[1000px] mx-auto"><h1 className="text-[40px] font-black text-center">Transparency – 100% Tracked</h1><p className="text-center opacity-60 mt-2">89% field • 11% admin • Audited • Video proof</p><div className="mt-10 grid md:grid-cols-2 gap-6"><div className="bg-white border rounded-[20px] p-6"><h3 className="font-black">Financials 2024</h3><div className="mt-4 space-y-2 text-[12px]"><div className="flex justify-between"><span>Field</span><b>89%</b></div><div className="h-2 bg-gray-100 rounded-full"><div className="h-2 bg-green-500 rounded-full" style={{width:"89%"}}></div></div><div className="flex justify-between"><span>Admin</span><b>7%</b></div><div className="h-2 bg-gray-100 rounded-full"><div className="h-2 bg-gray-400 rounded-full" style={{width:"7%"}}></div></div></div><Link href="/impact" className="mt-6 block w-full bg-[#0f3440] text-white text-center py-3 rounded-full font-black text-[12px]">Live Dashboard →</Link></div><div className="bg-[#0f3440] text-white rounded-[20px] p-6"><h3 className="font-black">How we prove</h3><ul className="mt-4 text-[12px] space-y-2"><li>📹 Drone before/after</li><li>📍 GPS + Maps</li><li>🪧 Name plate</li><li>💬 WhatsApp video</li><li>📄 Tax receipt</li><li>🕌 Zakat certificate</li></ul></div></div></section><Footer/></main>)
+}
